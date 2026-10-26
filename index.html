@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MASPUR STORE</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080d18;color:white;font-family:Arial,sans-serif}
+header{text-align:center;padding:28px 12px;background:linear-gradient(135deg,#75d5ff,#123eae)}
+header h1{margin:0}
+.container{max-width:600px;margin:auto;padding:20px}
+.intro{text-align:center;padding:12px}
+.intro h2{color:#78d5ff}
+.products{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:#14213a;border:1px solid #3985d9;border-radius:15px;padding:16px 10px;text-align:center}
+.icon{font-size:35px}
+.card h3{font-size:16px;min-height:38px}
+.price{font-size:18px;font-weight:bold;color:#80d8ff}
+button{width:100%;padding:12px 5px;background:#2688ee;color:white;border:0;border-radius:8px;font-weight:bold}
+.info{margin-top:20px;text-align:center;padding:16px;border:1px solid #555;border-radius:12px}
+footer{text-align:center;color:#b9c5d6;padding:25px 10px}
+</style>
+</head>
+<body>
+<header>
+<h1>💙 MASPUR STORE</h1>
+<p>Murah • Praktis • Terpercaya</p>
+</header>
+<main class="container">
+<div class="intro">
+<h2>Selamat Datang!</h2>
+<p>Pilih produk favorit kamu</p>
+</div>
+<div class="products">
+<div class="card">
+<div class="icon">🌏</div>
+<h3>NOKOS ASIA</h3>
+<p class="price">Rp5.000 / Rp10.000</p>
+<button onclick="pesan('NOKOS ASIA')">Pesan</button>
+</div>
+<div class="card">
+<div class="icon">🌍</div>
+<h3>NOKOS EROPA</h3>
+<p class="price">Rp10.000</p>
+<button onclick="pesan('NOKOS EROPA')">Pesan</button>
+</div>
+<div class="card">
+<div class="icon">🎬</div>
+<h3>ALIGHT MOTION 1 TAHUN</h3>
+<p class="price">Rp3.000</p>
+<button onclick="pesan('ALIGHT MOTION 1 TAHUN')">Pesan</button>
+</div>
+<div class="card">
+<div class="icon">🎨</div>
+<h3>CANVA</h3>
+<p class="price">Rp3.000</p>
+<button onclick="pesan('CANVA')">Pesan</button>
+</div>
+</div>
+<div class="info">
+<h3>📩 Informasi Pemesanan</h3>
+<p>Hubungi admin untuk memesan produk.</p>
+</div>
+</main>
+<footer>© 2026 MASPUR STORE 💙</footer>
+<script>
+function pesan(produk){
+alert("Kamu memilih "+produk+". Silakan hubungi admin untuk memesan.");
+}
+</script>
+</body>
+</html>
