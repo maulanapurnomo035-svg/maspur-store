@@ -3,71 +3,78 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MASPUR STORE</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#080d18;color:white;font-family:Arial,sans-serif}
-header{text-align:center;padding:28px 12px;background:linear-gradient(135deg,#75d5ff,#123eae)}
-header h1{margin:0}
-.container{max-width:600px;margin:auto;padding:20px}
-.intro{text-align:center;padding:12px}
-.intro h2{color:#78d5ff}
-.products{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.card{background:#14213a;border:1px solid #3985d9;border-radius:15px;padding:16px 10px;text-align:center}
-.icon{font-size:35px}
-.card h3{font-size:16px;min-height:38px}
-.price{font-size:18px;font-weight:bold;color:#80d8ff}
-button{width:100%;padding:12px 5px;background:#2688ee;color:white;border:0;border-radius:8px;font-weight:bold}
-.info{margin-top:20px;text-align:center;padding:16px;border:1px solid #555;border-radius:12px}
-footer{text-align:center;color:#b9c5d6;padding:25px 10px}
+body{
+  margin:0;padding:25px 15px;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#071a33,#1264a3,#9cddff);
+  color:#fff;text-align:center;
+}
+.container{max-width:500px;margin:auto}
+h1{font-size:32px;margin-bottom:8px}
+.subtitle{color:#d7efff;margin-bottom:28px}
+.product{
+  background:#fff;color:#102b49;
+  border:2px solid #8bd4ff;border-radius:18px;
+  padding:20px;margin:15px 0;
+  box-shadow:0 6px 15px #0005;
+}
+.product h2{margin:0 0 10px;font-size:20px}
+.price{font-size:19px;font-weight:bold;color:#0878c9;margin:12px}
+button{
+  width:100%;padding:13px;border:0;border-radius:10px;
+  background:#0878c9;color:white;font-size:16px;
+  font-weight:bold;cursor:pointer;
+}
+button:active{background:#064d85}
+.footer{margin-top:28px;font-size:12px;color:#d7efff}
 </style>
 </head>
 <body>
-<header>
-<h1>💙 MASPUR STORE</h1>
-<p>Murah • Praktis • Terpercaya</p>
-</header>
-<main class="container">
-<div class="intro">
-<h2>Selamat Datang!</h2>
-<p>Pilih produk favorit kamu</p>
+<div class="container">
+  <h1>MASPUR STORE</h1>
+  <p class="subtitle">Murah • Cepat • Terpercaya</p>
+
+  <div class="product">
+    <h2>NOKOS ASIA</h2>
+    <p>Nomor Kosong Asia</p>
+    <div class="price">Rp5.000 / Rp10.000</div>
+    <button onclick="pesan('NOKOS ASIA','Rp5.000 / Rp10.000')">PESAN SEKARANG</button>
+  </div>
+
+  <div class="product">
+    <h2>NOKOS EROPA</h2>
+    <p>Nomor Kosong Eropa</p>
+    <div class="price">Rp10.000</div>
+    <button onclick="pesan('NOKOS EROPA','Rp10.000')">PESAN SEKARANG</button>
+  </div>
+
+  <div class="product">
+    <h2>ALIGHT MOTION</h2>
+    <p>Langganan 1 Tahun</p>
+    <div class="price">Rp3.000</div>
+    <button onclick="pesan('ALIGHT MOTION 1 TAHUN','Rp3.000')">PESAN SEKARANG</button>
+  </div>
+
+  <div class="product">
+    <h2>CANVA</h2>
+    <p>Akses Canva</p>
+    <div class="price">Rp3.000</div>
+    <button onclick="pesan('CANVA','Rp3.000')">PESAN SEKARANG</button>
+  </div>
+
+  <p class="footer">© MASPUR STORE</p>
 </div>
-<div class="products">
-<div class="card">
-<div class="icon">🌏</div>
-<h3>NOKOS ASIA</h3>
-<p class="price">Rp5.000 / Rp10.000</p>
-<button onclick="pesan('NOKOS ASIA')">Pesan</button>
-</div>
-<div class="card">
-<div class="icon">🌍</div>
-<h3>NOKOS EROPA</h3>
-<p class="price">Rp10.000</p>
-<button onclick="pesan('NOKOS EROPA')">Pesan</button>
-</div>
-<div class="card">
-<div class="icon">🎬</div>
-<h3>ALIGHT MOTION 1 TAHUN</h3>
-<p class="price">Rp3.000</p>
-<button onclick="pesan('ALIGHT MOTION 1 TAHUN')">Pesan</button>
-</div>
-<div class="card">
-<div class="icon">🎨</div>
-<h3>CANVA</h3>
-<p class="price">Rp3.000</p>
-<button onclick="pesan('CANVA')">Pesan</button>
-</div>
-</div>
-<div class="info">
-<h3>📩 Informasi Pemesanan</h3>
-<p>Hubungi admin untuk memesan produk.</p>
-</div>
-</main>
-<footer>© 2026 MASPUR STORE 💙</footer>
+
 <script>
-function pesan(produk){
-alert("Kamu memilih "+produk+". Silakan hubungi admin untuk memesan.");
+function pesan(produk,harga){
+  const nomor='6285846119341';
+  const teks='Halo MASPUR STORE, saya mau pesan '+produk+
+  ' dengan harga '+harga+'. Apakah masih tersedia?';
+  window.open('https://wa.me/'+nomor+'?text='+encodeURIComponent(teks),'_blank');
 }
 </script>
 </body>
